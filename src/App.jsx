@@ -8,6 +8,7 @@ import Home from "./components/pages/Home.jsx";
 import NavBar from "./components/NavBar.jsx";
 import { useSelector } from "react-redux";
 import { Container } from "react-bootstrap";
+import ProtectedRoutes from "./components/protectorRoutes.jsx";
 
 
 
@@ -26,7 +27,9 @@ function App() {
            <Route path= '/products/:id' element={<ProductsDetail/>}/>
            <Route path= '/purchases' element={<Purchases/>}/>
            <Route path= '/login' element={<Login/>}/>
-         
+          <Route elemint={<ProtectedRoutes/>}> 
+          <Route path= '/purchases' element={<Purchases/>}/>
+          </Route>
          </Routes>
          </Container>
        </HashRouter> 
