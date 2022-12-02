@@ -22,9 +22,10 @@ const Favorites = () => {
                         {purchase.cart.products.map(product => (
                             <li key={product.id}>
                                 <Link  to={`/products/${product.id}`}>
+                                <h5><b>Purchase Date: </b >{product.createdAt}</h5>
                                 <h5><b>Product: </b>{product.title}</h5>
                                 <h5><b>Price: </b>${product.price}</h5>
-                                <h5><b>Purchase Date: </b >{product.createdAt}</h5>
+                                
                                 </Link>
                             </li>
                         ))}
